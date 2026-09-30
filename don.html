@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Faire un don</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            padding-top: 80px;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        .dons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        button {
+            width: 120px;
+            padding: 15px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #e63946;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #b91c2b;
+            transform: scale(1.05);
+        }
+
+        #message {
+            margin-top: 30px;
+            font-size: 22px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Faire un don</h1>
+
+    <p>Choisissez un montant :</p>
+
+    <div class="dons">
+        <button onclick="don(1)">1 €</button>
+        <button onclick="don(2)">2 €</button>
+        <button onclick="don(5)">5 €</button>
+        <button onclick="don(10)">10 €</button>
+        <button onclick="don(20)">20 €</button>
+        <button onclick="don(50)">50 €</button>
+        <button onclick="don(100)">100 €</button>
+    </div>
+
+    <div id="message"></div>
+
+    <script>
+        function don(montant) {
+            document.getElementById("message").textContent =
+                "Merci pour votre don fictif de " + montant + " € ! ❤️";
+        }
+    </script>
+
+</body>
+</html>
